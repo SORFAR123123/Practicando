@@ -1,46 +1,95 @@
-<!-- 1. DECLARACIÓN: Esto es HTML5 -->
 <!DOCTYPE html>
-
-<!-- 2. INICIO: Todo va dentro de <html> -->
 <html>
-
-<!-- 3. CABEZA: Información invisible -->
 <head>
-    <!-- 4. TÍTULO: Lo que sale en la pestaña -->
-    <title>Mi Primera Página</title>
-    
-    <!-- 5. CONEXIÓN 1: Vincula el CSS -->
+    <title>Quiz Japonés Quintillizas</title>
     <link rel="stylesheet" href="style.css">
-    <!-- rel="stylesheet" = "esto es para estilos" -->
-    <!-- href="style.css" = "busca el archivo style.css" -->
 </head>
-
-<!-- 6. CUERPO: Lo visible -->
 <body>
-    <!-- 7. TÍTULO GRANDE -->
-    <h1 id="titulo">¡Hola Mundo!</h1>
-    <!-- id="titulo" = le pone DNI: "titulo" -->
+    <!-- PANTALLA DE INICIO -->
+    <div id="inicio" class="pantalla">
+        <h1 id="titulo">🎌 Quiz Japonés Quintillizas 🎌</h1>
+        <p id="texto">Aprende japonés con las quintillizas</p>
+        <img id="imagen" src="https://pbs.twimg.com/media/G8R3mtxa4AEw9rK?format=jpg&name=small" alt="Quintillizas">
+        
+        <div class="opciones-inicio">
+            <button id="btn-empezar" class="btn-quiz">🎮 Empezar Quiz</button>
+            <button id="btn-instrucciones" class="btn-quiz">📖 Instrucciones</button>
+        </div>
+    </div>
     
-    <!-- 8. PÁRRAFO -->
-    <p id="texto">Las quintillizas son mis putas xD</p>
+    <!-- PANTALLA DEL QUIZ -->
+    <div id="quiz" class="pantalla" style="display: none;">
+        <div class="quiz-header">
+            <div class="contadores">
+                <span>✅ <span id="aciertos">0</span></span>
+                <span>❌ <span id="errores">0</span></span>
+                <span>🎯 <span id="puntaje">0</span></span>
+                <span>📝 <span id="palabra-actual">1/10</span></span>
+            </div>
+            
+            <h2 id="pregunta-titulo">¿Qué significa esta palabra?</h2>
+        </div>
+        
+        <div class="quiz-contenido">
+            <div id="palabra-japones" class="palabra-japonesa">
+                こんにちは
+            </div>
+            <div id="romaji" class="romaji">
+                (konnichiwa)
+            </div>
+            
+            <div id="opciones-container" class="opciones-quiz">
+                <!-- Las opciones se generan con JavaScript -->
+            </div>
+            
+            <div id="resultado" class="resultado-quiz">
+                <!-- Resultado aparece aquí -->
+            </div>
+            
+            <div class="quiz-controls">
+                <button id="btn-siguiente" class="btn-quiz" style="display: none;">
+                    ⏭️ Siguiente
+                </button>
+                <button id="btn-volver" class="btn-quiz">
+                    🏠 Volver al Inicio
+                </button>
+            </div>
+        </div>
+    </div>
     
-    <!-- 9. IMAGEN -->
-    <img id="imagen" src="https://pbs.twimg.com/media/G8R3mtxa4AEw9rK?format=jpg&name=small" alt="Imagen de ejemplo">
-    <!-- src = dirección de la imagen -->
-    <!-- alt = texto si no carga -->
+    <!-- PANTALLA DE RESULTADOS -->
+    <div id="resultados-finales" class="pantalla" style="display: none;">
+        <h1>🎉 ¡Quiz Completado! 🎉</h1>
+        
+        <div class="estadisticas">
+            <div class="estadistica">
+                <div class="numero" id="final-aciertos">0</div>
+                <div class="label">✅ Aciertos</div>
+            </div>
+            <div class="estadistica">
+                <div class="numero" id="final-errores">0</div>
+                <div class="label">❌ Errores</div>
+            </div>
+            <div class="estadistica">
+                <div class="numero" id="final-porcentaje">0%</div>
+                <div class="label">🎯 Porcentaje</div>
+            </div>
+            <div class="estadistica">
+                <div class="numero" id="final-puntaje">0</div>
+                <div class="label">🏆 Puntaje</div>
+            </div>
+        </div>
+        
+        <div id="mensaje-final" class="mensaje-final">
+            <!-- Mensaje final aparece aquí -->
+        </div>
+        
+        <div class="botones-finales">
+            <button id="btn-reiniciar" class="btn-quiz">🔄 Jugar Otra Vez</button>
+            <button id="btn-compartir" class="btn-quiz">📤 Compartir</button>
+        </div>
+    </div>
     
-    <!-- 10. BOTÓN -->
-    <button id="boton">Hazme clic</button>
-    
-    <!-- 11. CAJA PARA RESULTADOS -->
-    <div id="resultado"></div>
-    <!-- Div vacío donde pondremos cosas -->
-    
-    <!-- 12. CONEXIÓN 2: Vincula el JavaScript -->
     <script src="script.js"></script>
-    <!-- src="script.js" = "usa el archivo script.js" -->
-    <!-- Esto va AL FINAL para cargar después del HTML -->
 </body>
-
-<!-- 13. FIN: Termina el HTML -->
 </html>
