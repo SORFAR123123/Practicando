@@ -8,10 +8,22 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* 3. ESTILOS PARA EL BODY (fondo, fuente) */
+/* 2. ESTILOS PARA TODO EL BODY */
 body {
-    background-color: #1565c0;  /* Azul oscuro más vibrante */
-    font-family: Arial, sans-serif;  /* Tipo de letra */
-    text-align: center;  /* Texto centrado */
-    padding: 50px;  /* Espacio interno de 50px */
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    /* Fondo degradado de rosa a turquesa */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    /* Tipo de letra divertido */
+    min-height: 100vh;
+    /* Mínimo 100% del alto de la ventana */
+    display: flex;
+    /* Usa flexbox para centrar */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    padding: 20px;
+    /* Espacio interno de 20px en los bordes */
+    text-align: center;
+    /* Todo el texto centrado */
 }
