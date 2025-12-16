@@ -1,29 +1,245 @@
 /* ============================================
-   ESTILOS PARA LA PÁGINA DE QUINTILLIZAS
+   ESTILOS PARA QUIZ JAPONÉS QUINTILLIZAS
    ============================================ */
 
-/* 1. ESTILOS GENERALES PARA TODA LA PÁGINA */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
 }
-/* 2. ESTILOS PARA TODO EL BODY */
+
 body {
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-    /* Fondo degradado de rosa a turquesa */
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    /* Tipo de letra divertido */
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%);
     min-height: 100vh;
-    /* Mínimo 100% del alto de la ventana */
     display: flex;
-    /* Usa flexbox para centrar */
     justify-content: center;
-    /* Centra horizontalmente */
     align-items: center;
-    /* Centra verticalmente */
     padding: 20px;
-    /* Espacio interno de 20px en los bordes */
+}
+
+.pantalla {
+    background: white;
+    border-radius: 30px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
     text-align: center;
-    /* Todo el texto centrado */
+    display: none;
+}
+
+#inicio {
+    display: block;
+}
+
+#titulo {
+    color: #ff1493;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 #ffd166;
+}
+
+#texto {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+#imagen {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    margin: 25px auto;
+    border: 5px solid #ffd166;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.opciones-inicio {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-quiz {
+    background: linear-gradient(135deg, #4ecdc4, #2a9d8f);
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3);
+    font-weight: bold;
+}
+
+.btn-quiz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(78, 205, 196, 0.5);
+}
+
+.btn-quiz:active {
+    transform: translateY(0);
+}
+
+/* ESTILOS PARA EL QUIZ */
+.quiz-header {
+    background: linear-gradient(135deg, #9c89b8, #6d5c9e);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.contadores {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#pregunta-titulo {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.palabra-japonesa {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0 10px;
+    text-shadow: 2px 2px 0 #ffd166;
+}
+
+.romaji {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+.opciones-quiz {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.opcion-btn {
+    background: white;
+    border: 3px solid #4ecdc4;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.opcion-btn:hover {
+    background: #e8f4f3;
+    transform: translateY(-2px);
+}
+
+.opcion-btn.correcta {
+    background: #4caf50;
+    color: white;
+    border-color: #388e3c;
+}
+
+.opcion-btn.incorrecta {
+    background: #f44336;
+    color: white;
+    border-color: #d32f2f;
+}
+
+.resultado-quiz {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    font-size: 1.3rem;
+    border-left: 5px solid #2196f3;
+    display: none;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* ESTILOS PARA RESULTADOS FINALES */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.estadistica {
+    background: linear-gradient(135deg, #ffd166, #ffb347);
+    padding: 25px;
+    border-radius: 20px;
+    color: #333;
+}
+
+.estadistica .numero {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.estadistica .label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.mensaje-final {
+    background: rgba(255, 20, 147, 0.1);
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px 0;
+    border-left: 5px solid #ff1493;
+    font-size: 1.3rem;
+}
+
+.botones-finales {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .pantalla {
+        padding: 25px;
+    }
+    
+    #titulo {
+        font-size: 2.2rem;
+    }
+    
+    .palabra-japonesa {
+        font-size: 3rem;
+    }
+    
+    .opciones-quiz {
+        grid-template-columns: 1fr;
+    }
+    
+    .estadisticas {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .opciones-inicio, .botones-finales, .quiz-controls {
+        flex-direction: column;
+    }
 }
