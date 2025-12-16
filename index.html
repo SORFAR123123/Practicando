@@ -1,18 +1,46 @@
+<!-- 1. DECLARACIÓN: Esto es HTML5 -->
 <!DOCTYPE html>
+
+<!-- 2. INICIO: Todo va dentro de <html> -->
 <html>
+
+<!-- 3. CABEZA: Información invisible -->
 <head>
+    <!-- 4. TÍTULO: Lo que sale en la pestaña -->
     <title>Mi Primera Página</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="pantalla-inicio" class="pantalla">
-        
-    <h1>¡HOLA MUNDO!</h1>
     
-    <p>Las quintillizas son mis putas xD</p>
-     <div class="container">
-        <h1>¡Quinti trolas !</h1>
-      <button id="btn-empezar" class="btn">🚀 Empezar Quiz</button>   
-    <img src="https://pbs.twimg.com/media/G8R3mtxa4AEw9rK?format=jpg&name=small" alt="Imagen ejemplo">
+    <!-- 5. CONEXIÓN 1: Vincula el CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- rel="stylesheet" = "esto es para estilos" -->
+    <!-- href="style.css" = "busca el archivo style.css" -->
+</head>
+
+<!-- 6. CUERPO: Lo visible -->
+<body>
+    <!-- 7. TÍTULO GRANDE -->
+    <h1 id="titulo">¡Hola Mundo!</h1>
+    <!-- id="titulo" = le pone DNI: "titulo" -->
+    
+    <!-- 8. PÁRRAFO -->
+    <p id="texto">Las quintillizas son mis putas xD</p>
+    
+    <!-- 9. IMAGEN -->
+    <img id="imagen" src="https://pbs.twimg.com/media/G8R3mtxa4AEw9rK?format=jpg&name=small" alt="Imagen de ejemplo">
+    <!-- src = dirección de la imagen -->
+    <!-- alt = texto si no carga -->
+    
+    <!-- 10. BOTÓN -->
+    <button id="boton">Hazme clic</button>
+    
+    <!-- 11. CAJA PARA RESULTADOS -->
+    <div id="resultado"></div>
+    <!-- Div vacío donde pondremos cosas -->
+    
+    <!-- 12. CONEXIÓN 2: Vincula el JavaScript -->
+    <script src="script.js"></script>
+    <!-- src="script.js" = "usa el archivo script.js" -->
+    <!-- Esto va AL FINAL para cargar después del HTML -->
 </body>
+
+<!-- 13. FIN: Termina el HTML -->
 </html>
