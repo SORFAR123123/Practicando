@@ -1,0 +1,10 @@
+/* ============================================
+   ESTILOS PARA LA PÁGINA DE QUINTILLIZAS
+   ============================================ */
+
+/* 1. ESTILOS GENERALES PARA TODA LA PÁGINA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
