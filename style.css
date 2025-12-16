@@ -8,3 +8,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* 3. ESTILOS PARA EL BODY (fondo, fuente) */
+body {
+    background-color: #f0f0f0;  /* Color gris claro */
+    font-family: Arial, sans-serif;  /* Tipo de letra */
+    text-align: center;  /* Texto centrado */
+    padding: 50px;  /* Espacio interno de 50px */
+}
